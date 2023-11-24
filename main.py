@@ -9,7 +9,6 @@ from kivymd.uix.pickers import MDDatePicker, MDTimePicker
 import datetime
 from kivymd.uix.snackbar import Snackbar
 from kivymd.uix.label import MDLabel
-from plyer import notification
 
 from kivymd.uix.taptargetview import MDTapTargetView
 
@@ -711,7 +710,7 @@ class App(MDApp):
 				
 				notes_db.insert_into_table(str(IDS.note_title.text), str(current_date) , str(IDS.notes.text))
 				
-				notification. notify(title="Note added successfully", message="your note has been saved")
+				#notification. notify(title="Note added successfully", message="your note has been saved")
 				
 			else: 
 				stat = Snackbar(text="A title is required")
@@ -785,7 +784,7 @@ class App(MDApp):
 			notes_db.cursor.execute(SQL)
 			
 			notes_db.conn.commit()
-			notification. notify(title=" Note Deleted successfully", message="your note has been deleted")
+			#notification. notify(title=" Note Deleted successfully", message="your note has been deleted")
 			
 		except Error as e:
 			
@@ -845,11 +844,11 @@ class App(MDApp):
 				task_db.insert_into_table_(title_text, details_text, "Not Accomplished", date_time_text)
 				
 				print("Added data to Tasks")
-				notification. notify(title=" Task added successfully", message="your task has been saved")
+				#notification. notify(title=" Task added successfully", message="your task has been saved")
 			
 		except Error as e:
 			print("Add to Tasks failed", e)
-			notification. notify(title="Operation Failed", message="Task was not saved")
+			#notification. notify(title="Operation Failed", message="Task was not saved")
 			
 		finally:
 			
@@ -908,7 +907,7 @@ class App(MDApp):
 			task_db.conn.commit()
 			
 			print("data %s deleted" %id) 
-			notification. notify(title="Data Deleted", message="you have successfully deleted a task")
+			#notification. notify(title="Data Deleted", message="you have successfully deleted a task")
 			
 		except Error as e:
 			print("remove data failed", e)
