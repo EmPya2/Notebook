@@ -1,6 +1,5 @@
 from kivymd.app import MDApp
 import sqlite3
-import sys
 from kivy.lang import Builder
 from kivymd.utils.set_bars_colors import set_bars_colors
 from kivymd.uix.boxlayout import MDBoxLayout
@@ -693,7 +692,7 @@ class App(MDApp):
 	
 			
 	def exit(self):
-		sys.exit()
+		pass
 		
 	def save_note(self):
 		IDS = self.root.ids
