@@ -623,7 +623,7 @@ class Note(MDCard):
 		
 	def delete(self):
 		print(dir(self.parent.remove_widget(self)))
-		notification. notify(title="Note Deleted successfully", message="your note has been removed")
+		#notification. notify(title="Note Deleted successfully", message="your note has been removed")
 		
 
 # Task card inherit from mMDCard class	
