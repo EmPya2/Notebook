@@ -44,10 +44,10 @@ requirements = python3,kivy,kivymd,sqlite3,plyer,datetime
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/data/empya_logo.png
+presplash.filename = %(source.dir)s/empya_logo.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/data/note.png
+icon.filename = %(source.dir)s/note.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
